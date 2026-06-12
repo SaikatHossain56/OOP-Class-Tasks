@@ -1,44 +1,38 @@
 package practice_problem_05;
 
-class Car {
-    public String owner;
-    public String name;
-    public String serial;
-    public String color;
-    private double fuelLevel;
-    Car(String owner, String name, String serial, String color, double fuelLevel){
-        this.owner = owner;
-        this.name = name;
-        this.serial = serial;
-        this.color = color;
-        this.fuelLevel = fuelLevel;
-    }
-    public void start(){
-        System.out.println(name + " is starting.");
-    }
-    public void stop(){
-        System.out.println(name + " is stopping.");
-    }
-    public void checkFuel(){
-        System.out.println("Fuel Level: " + fuelLevel + " L");
-    }
-    public void accelerator(){
-        System.out.println("The car is accelerating");
-    }
-}
-public class Main{
+public class Main {
     public static void main(String[] args){
+
+        System.out.println("Car Object Demonstration: \n");
         Car car = new Car(
                 "Saikat Hossain", "Mercedes-Benz",
                 "407-02-2003A", "Black", 45.00
-                );
+        );
 
         car.checkFuel();
         car.start();
         car.accelerator();
         car.stop();
 
+        System.out.println("\nDog Object Demonstration: \n");
+        Dog dog = new Dog("Ghost", 5, "Siberian Husky");
+
+        System.out.println("Name: " + dog.getName());
+        System.out.println("Age: " + dog.getAge());
+        System.out.println("Breed: " + dog.getBreed() + "\n");
+
+        dog.bark();
+        dog.run();
+        dog.spin();
+
+        System.out.println("\nLibrary System Demonstration: \n");
+
+        LibrarySystem book1 = new LibrarySystem("The Alchemist");
+        book1.getInfo();
+
+        LibrarySystem book2 = new LibrarySystem("Deyal", "Humayum Ahmed");
+        book2.getInfo();
+
 
     }
-
 }
