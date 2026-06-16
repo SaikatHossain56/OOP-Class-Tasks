@@ -1,4 +1,4 @@
-package practice_problem02;
+package practice_problem_02;
 
 public class SeriesLoop {
     public static void main(String[] args) {
